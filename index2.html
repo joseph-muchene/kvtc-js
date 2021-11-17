@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1>
+            Javascript forms
+        </h>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Fill The Form</h2>
+
+            <div class="form--container">
+                <form name="applicant" onsubmit="return getStaff()">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" id="" class="nme">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" name="email" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Residence</label>
+                <input type="text" name="residence" id="">
+            </div>
+            <div class="form-group">
+                <label for="">salary</label>
+                <input type="number" name="salary" id="">
+            </div>
+            
+            <div class="form-group">
+                <label for="">change salary</label>
+                <input type="number" name="changeSalary" id="">
+            </div>
+            <input type="submit" value="submit">
+            </form>
+            </div>
+        </div>
+    </main>
+    <script>
+var name = document.forms["applicant"]["name"];
+
+function staff(id,nme,salary){
+    this.id = id;
+    this.name = nme;
+    this.salary = salary;
+
+    this.changeSalary = (otherSalary) => {
+this.salary = otherSalary
+    }
+
+    this.changeName = (newName)=>{
+        this.name = newName;
+    }
+}
+
+let x = new staff();
+x.id = 229;
+x.name = "joseph" ;
+x.salary = 10000;
+    
+
+
+  document.write("ID "+ " "+ x.id + "NAME " + " "+ x.name + " SALARY"+ " "+x.salary);
+  document.write("<br>")
+  document.write("<br>")
+x.changeSalary(25000);
+x.changeName("michle")
+document.write("ID "+ " "+ x.id + "NAME " + " "+ x.name + " SALARY"+ " "+x.salary);
+    </script>
+</body>
+</html>
